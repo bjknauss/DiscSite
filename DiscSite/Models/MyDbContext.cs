@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity;
 
 namespace DiscSite.Models
 {
@@ -23,7 +24,12 @@ namespace DiscSite.Models
             return new ApplicationDbContext();
         }
 
-
+        public static UserManager<ApplicationUser> CreateUserManager() {
+            
+            var userStore = new UserStore<ApplicationUser>(new ApplicationDbContext());
+            var UserManager = new UserManager<ApplicationUser>(userStore);
+            return UserManager;
+        }
 
     }
 }

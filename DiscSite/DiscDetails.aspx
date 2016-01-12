@@ -21,11 +21,26 @@
                             <li>Fade: <%#: Item.Fade %></li>
                         </ul>
                         <br />
-                        <span><b>Company:</b>&nbsp;<%#: Item.Company.CompanyName %></span>
-                        <br />
-                    </td>
+                        <span><b>Company:</b>&nbsp;<%#: Item.Company.CompanyName %></span><br /></td>
                 </tr>
             </table>
         </ItemTemplate>
     </asp:FormView>
+    <br />
+    <h4>Comments</h4>
+    <asp:ListView ID="commentList" runat="server" 
+                DataKeyNames="DiscCommentId"
+                ItemType="DiscSite.Models.DiscComment" SelectMethod="GetComments">
+        <LayoutTemplate>
+            <table runat="server" id="commentsTable">
+                <tr runat="server" id="itemPlaceHolder">
+                </tr>
+            </table>
+        </LayoutTemplate>
+        <ItemTemplate>
+            <tr runat="server">
+                <td runat="server"><p><%#: Item.Body %> by <a runat="server" href="#"><%#: GetUserFromDisc(Item) %></a></p></td>
+            </tr>
+        </ItemTemplate>
+    </asp:ListView>
 </asp:Content>
