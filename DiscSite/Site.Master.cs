@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DiscSite.Models;
 
 namespace DiscSite
 {
@@ -73,6 +74,12 @@ namespace DiscSite
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
+        }
+        public IQueryable<Category> GetCategories()
+        {
+            var _db = new DiscSite.Models.ApplicationDbContext();
+            IQueryable<Category> query = _db.Categories;
+            return query;
         }
     }
 }

@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DiscSite
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace DiscSite {
+    
+    
+    public partial class SiteMaster {
+        
         /// <summary>
         /// HeadContent control.
         /// </summary>
@@ -22,7 +20,16 @@ namespace DiscSite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
-
+        
+        /// <summary>
+        /// categoryList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView categoryList;
+        
         /// <summary>
         /// FeaturedContent control.
         /// </summary>
@@ -31,7 +38,7 @@ namespace DiscSite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder FeaturedContent;
-
+        
         /// <summary>
         /// MainContent control.
         /// </summary>
