@@ -17,6 +17,7 @@ namespace DiscSite.Models
     public class ApplicationUser : IdentityUser
     {
         public virtual ICollection<Message> Messages { get; set; }
+        public virtual ICollection<DiscComment> Comments { get; set; }
 
 
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)

@@ -350,6 +350,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Disc.cs" />
+    <Compile Include="Models\DiscComment.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Models\MyDbInitializer.cs" />
     <Compile Include="Models\MyUser.cs" />
